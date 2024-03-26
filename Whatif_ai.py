@@ -21,15 +21,9 @@ Let's see where your imagination takes you!""")
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
 
     if st.button("Generate Random Scenario"):
-        # Define a list of random scenarios
-     random_scenarios = [
-        "What if robots ruled the world?",
-        "What if time travel was possible?",
-        "What if dinosaurs still existed?",
-        "What if humans could breathe underwater?",
-        "What if teleportation became a reality?",
-        # Add more scenarios here
-    ]
+     random_scenarios = ["Scenario A", "Scenario B", "Scenario C"]
+    random_scenario = random.choice(random_scenarios)
+    print("Randomly selected scenario:", random_scenario)
     random_scenario = random.choice(random_scenarios)
     st.write("Random Scenario:", random_scenario)
 
