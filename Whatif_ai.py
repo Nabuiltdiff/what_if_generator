@@ -8,26 +8,14 @@ import random
 
 def main():
     
-    st.set_page_config(
-    page_title="What If Generator",
-    page_icon="🚀",
-    layout="wide",
-    initial_sidebar_state="expanded",
-    theme="dark"  # Choose a colorful theme (e.g., "light" or "dark")
-    )
-
-    st.title("🌈 Welcome to the What If Generator App")
-    st.markdown("Explore the possibilities with vibrant colors!")
-    st.success("Success message: Your creativity knows no bounds!")
-    st.error("Error message: Oops! Let's try another scenario.")
-    
     with st.sidebar:
         st.title("About App")
         st.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
 
 Let's see where your imagination takes you!""")
+        st.title("🤖 What If Generator with OpenAI")
     # Category Selection
-    categories = ["Technology", "History", "Society", "Personal"]
+    categories = ["general, Technology", "History", "Society", "Personal"]
     selected_category = st.selectbox("Choose a Category:", categories)
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
