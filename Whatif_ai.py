@@ -21,7 +21,7 @@ Let's see where your imagination takes you!""")
 
     if st.button("Generate Random Scenario"):
         random_scenarios = ["What if robots ruled the world?", "What if time travel was possible?", "What if dinosaurs still existed?"]
-        random_scenario = random.choice(random_scenarios)
+        random_scenario = random.choice(random_scenarios)  # Select a random scenario from the list
         st.write("Random Scenario:", random_scenario)
 
     if st.button("Generate Response"):
