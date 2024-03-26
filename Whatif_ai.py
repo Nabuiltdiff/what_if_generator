@@ -59,12 +59,6 @@ Let's see where your imagination takes you!""")
         st.write("Generated Image URL:")
         st.write(image_url)
 
-# Display themed emojis
-st.write("Let your creativity soar! ✨🎨🚀")
-
-image_path = "themed_illustration.jpg"  # Update the file path as per your directory structure
-st.image(image_path, caption="Imagination knows no bounds")
-
 if __name__ == "__main__":
     main()
 
