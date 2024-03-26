@@ -37,13 +37,3 @@ class WhatIfMethod:
         image_url = cover_response.data[0].url
 
         return image_url
-
-# Define a list of random scenarios
-    random_scenarios = [
-        "What if robots ruled the world?",
-        "What if time travel was possible?",
-        "What if dinosaurs still existed?",
-        "What if humans could breathe underwater?",
-        "What if teleportation became a reality?",
-        # Add more scenarios here
-    ]
