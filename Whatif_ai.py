@@ -3,6 +3,7 @@ import streamlit as st
 from openai import OpenAI
 from IPython.display import Image
 from WhatIf_Method import WhatIfMethod as WhatIfMethod
+import random
 
 
 def main():
@@ -20,6 +21,11 @@ Let's see where your imagination takes you!""")
     selected_category = st.selectbox("Choose a Category:", categories)
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
+
+    if st.button("Generate Random Scenario"):
+        random_scenarios = ["What if robots ruled the world?", "What if time travel was possible?", "What if dinosaurs still existed?"]
+        random_scenario = random.choice(random_scenarios)
+        st.write("Random Scenario:", random_scenario)
 
     if st.button("Generate Response"):
         # Set the OpenAI API key
