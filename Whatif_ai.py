@@ -59,23 +59,11 @@ Let's see where your imagination takes you!""")
         st.write("Generated Image URL:")
         st.write(image_url)
 
-# Add themed illustrations or images
-st.image("themed_illustration.jpg", caption="Imagination knows no bounds")
-
 # Display themed emojis
 st.write("Let your creativity soar! ✨🎨🚀")
 
-# Themed background color
-st.markdown(
-    """
-    <style>
-    body {
-        background-color: #f2f2f2;  /* dark */
-    }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
+image_path = "themed_illustration.jpg"  # Update the file path as per your directory structure
+st.image(image_path, caption="Imagination knows no bounds")
 
 if __name__ == "__main__":
     main()
