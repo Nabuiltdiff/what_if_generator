@@ -7,7 +7,7 @@ import random
 
 def main():
     st.sidebar.title("About App")
-    st.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
+    st.sidebar.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
 
 Let's see where your imagination takes you!""")
 
@@ -21,7 +21,7 @@ Let's see where your imagination takes you!""")
 
     if st.button("Generate Random Scenario"):
         random_scenarios = ["What if robots ruled the world?", "What if time travel was possible?", "What if dinosaurs still existed?"]
-        random_scenario = random.choice(random_scenarios)  # Select a random scenario from the list
+        random_scenario = random.choice(random_scenarios)
         st.write("Random Scenario:", random_scenario)
 
     if st.button("Generate Response"):
