@@ -70,7 +70,7 @@ st.markdown(
     """
     <style>
     body {
-        background-color: #f2f2f2;  /* Choose a themed background color */
+        background-color: #f2f2f2;  /* dark */
     }
     </style>
     """,
