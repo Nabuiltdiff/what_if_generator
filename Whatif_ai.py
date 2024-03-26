@@ -5,8 +5,10 @@ from IPython.display import Image
 from WhatIf_Method import WhatIfMethod as WhatIfMethod
 import random
 
-
 def main():
+    st.sidebar.title("Categories")
+    categories = ["Technology", "History", "Society", "Personal"]
+    selected_category = st.sidebar.selectbox("Choose a Category:", categories)
 
     with st.sidebar:
         st.title("About App")
@@ -15,10 +17,6 @@ def main():
 Let's see where your imagination takes you!""")
     
     st.title("🤖 What If Generator with OpenAI")
-
-    # Category Selection
-    categories = ["Technology", "History", "Society", "Personal"]
-    selected_category = st.selectbox("Choose a Category:", categories)
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
 
@@ -43,7 +41,3 @@ Let's see where your imagination takes you!""")
 
 if __name__ == "__main__":
     main()
-
-
-
-    
