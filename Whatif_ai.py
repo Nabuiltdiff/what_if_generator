@@ -13,8 +13,9 @@ def main():
         st.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
 
 Let's see where your imagination takes you!""")
-        st.title("🤖 What If Generator with OpenAI")
+        
     # Category Selection
+        st.title("🤖 What If Generator with OpenAI")
     categories = ["general, Technology", "History", "Society", "Personal"]
     selected_category = st.selectbox("Choose a Category:", categories)
 
