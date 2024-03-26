@@ -6,15 +6,14 @@ from WhatIf_Method import WhatIfMethod as WhatIfMethod
 import random
 
 def main():
+    st.sidebar.title("About App")
+    st.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
+
+Let's see where your imagination takes you!""")
+
     st.sidebar.title("Categories")
     categories = ["Technology", "History", "Society", "Personal"]
     selected_category = st.sidebar.selectbox("Choose a Category:", categories)
-
-    with st.sidebar:
-        st.title("About App")
-        st.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
-
-Let's see where your imagination takes you!""")
     
     st.title("🤖 What If Generator with OpenAI")
 
