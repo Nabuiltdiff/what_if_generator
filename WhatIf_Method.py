@@ -26,14 +26,14 @@ class WhatIfMethod:
 
     @staticmethod
     def pic_ai(msg, client):
-        cover_response = client.images.generate(
-            model="dall-e-2",
+        pic_response = client.images.generate(
+            model="dall-e-3",
             prompt=f"{msg}",
             size="1024x1024",
             quality="standard",
             n=1,
         )
 
-        image_url = cover_response.data[0].url
+        image_url = pic_response.data[0].url
 
         return image_url
