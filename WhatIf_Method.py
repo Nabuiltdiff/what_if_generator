@@ -24,8 +24,8 @@ class WhatIfMethod:
 
         return whatif
 
-    @staticmethod
-    def pic_ai(msg, client):
+   # @staticmethod
+    #def pic_ai(msg, client):
         pic_response = client.images.generate(
             model="dall-e-3",
             prompt=f"{msg}",
