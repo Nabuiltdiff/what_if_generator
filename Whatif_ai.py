@@ -34,9 +34,9 @@ Let's see where your imagination takes you!""")
         st.write("Generated Text Response:")
         st.write(whatif_response)
 
-        # Generate and display the image
-        generated_image = WhatIfMethod.generate_image(user_input_msg, client)
-        st.image(generated_image, caption='Generated Image')
+        image_url = WhatIfMethod.pic_ai(user_input_msg, client)
+        st.write("Generated Image URL:")
+        st.write(image_url)
 
 if __name__ == "__main__":
     main()
