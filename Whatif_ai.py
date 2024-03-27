@@ -34,7 +34,7 @@ Let's see where your imagination takes you! """)
         st.write(f"Generated {num_possibilities} Possibilities:")
         for i, possibility in enumerate(possibilities):
             st.subheader(f"Possibility {i+1}")
-            st.markdown(possibility)
+            st.markdown(possibility)  # Use markdown for each possibility
 
 if __name__ == "__main__":
     main()
