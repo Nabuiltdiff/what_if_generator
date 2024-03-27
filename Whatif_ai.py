@@ -17,7 +17,7 @@ def main():
     num_possibilities = st.slider("Number of Possibilities to Generate", min_value=1, max_value=5, value=1)
 
     if st.button("Generate Scenarios"):
-        OpenAI.api_key = st.secrets["OPENAI_KEY"]
+        OpenAI.api_key = st.secrets["OPENAI_API_KEY"]
         client = OpenAI()
 
         # Generate multiple possibilities using a loop
