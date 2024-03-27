@@ -26,15 +26,20 @@ Let's see where your imagination takes you! """)
 
         # Generate multiple possibilities using a loop
         possibilities = []
+        images = []  # List to store image URLs
         for _ in range(num_possibilities):
             whatif_response = WhatIfMethod.whatif_ai(user_input_msg, client)
+            image_url = WhatIfMethod.pic_ai(user_input_msg, client)
             possibilities.append(whatif_response)
+            images.append(image_url)
 
-        # Display generated possibilities with markdown
+        # Display generated possibilities with markdown and images
         st.write(f"Generated {num_possibilities} Possibilities:")
-        for i, possibility in enumerate(possibilities):
+        for i, (possibility, image_url) in enumerate(zip(possibilities, images)):
             st.subheader(f"Possibility {i+1}")
-            st.markdown(possibility)  # Use markdown for each possibility
+            st.markdown(possibility)
+            if image_url:  # Check if image URL exists
+                st.image(image_url, caption=f"Visual representation of Possibility {i+1}")
 
 if __name__ == "__main__":
     main()
