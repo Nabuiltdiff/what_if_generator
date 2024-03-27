@@ -1,12 +1,20 @@
+import os 
 import streamlit as st
 from openai import OpenAI
-import random
+from IPython.display import Image
 from WhatIf_Method import WhatIfMethod as WhatIfMethod
+import random
 
 def main():
     st.sidebar.title("About App")
-    # ... (similar to your code)
+    st.sidebar.write("""The What If Generator is your brainstorming buddy!  This app helps you explore possibilities, overcome creative roadblocks, and  approach challenges from new angles. Simply enter a situation or question  and get a random "what if" scenario to jumpstart your thinking.
 
+Let's see where your imagination takes you!""")
+
+    st.sidebar.title("Categories")
+    categories = ["Technology", "History", "Society", "Personal"]
+    #selected_category = st.sidebar.selectbox("Choose a Category:", categories)
+    
     st.title(" What If Generator with OpenAI")
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value="What if humans could fly? e.g.")
@@ -35,6 +43,3 @@ def main():
         if twist_prompt:
             st.subheader("Scenario with a Twist:")
             st.write(WhatIfMethod.whatif_ai(f"{whatif_response}\n{twist_prompt}", client))
-
-if __name__ == "__main__":
-    main()
