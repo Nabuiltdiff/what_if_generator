@@ -38,7 +38,7 @@ Let's see where your imagination takes you!""")
 
         image_url = WhatIfMethod.pic_ai(user_input_msg, client)
         st.write("Generated Image URL:")
-        st.print(image_url)
+        st.image(image_url)
 
 if __name__ == "__main__":
     main()
