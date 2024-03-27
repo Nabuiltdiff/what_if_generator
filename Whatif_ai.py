@@ -8,9 +8,13 @@ import random
 
 def main():
     st.sidebar.title("About App")
-    # ... (similar to your code)
+    st.sidebar.write("""**The What If Generator** is your brainstorming buddy! 
 
-    st.title(" What If Generator with OpenAI")
+Explore possibilities, overcome creative roadblocks, and approach challenges from new angles. Simply enter a situation or question and get a random "what if" scenario to jumpstart your thinking.
+
+Let's see where your imagination takes you! """)
+
+    st.title("🤖 What If Generator with OpenAI")
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
 
@@ -30,8 +34,7 @@ def main():
         st.write(f"Generated {num_possibilities} Possibilities:")
         for i, possibility in enumerate(possibilities):
             st.subheader(f"Possibility {i+1}")
-            st.markdown(f"<br>{possibility}<br>")  # Ensure proper formatting
-
+            st.markdown(possibility)  # Use markdown for each possibility
 
 if __name__ == "__main__":
     main()
