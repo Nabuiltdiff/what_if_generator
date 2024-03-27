@@ -19,6 +19,8 @@ Let's see where your imagination takes you!""")
 
     user_input_msg = st.text_input("Enter a 'What if' scenario:", value=" What if humans could fly? e.g.")
 
+
+
     if st.button("Generate Random Scenario"):
         random_scenarios = ["What if robots ruled the world?", "What if time travel was possible?", "What if dinosaurs still existed?"]
         random_scenario = random.choice(random_scenarios)
@@ -36,7 +38,7 @@ Let's see where your imagination takes you!""")
 
         image_url = WhatIfMethod.pic_ai(user_input_msg, client)
         st.write("Generated Image URL:")
-        st.write(image_url)
+        st.print(image_url)
 
 if __name__ == "__main__":
     main()
